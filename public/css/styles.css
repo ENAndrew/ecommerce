@@ -12,7 +12,7 @@ body {
     width: 80%;
     margin-right: auto;
     margin-left: auto;
-    height: 100px;
+    height: 50px;
     position: relative;
 }
 
@@ -20,7 +20,7 @@ body {
     width: 400px;
     height: auto;
     position: absolute;
-    top: 27px;
+    top: 35px;
     left: 5%;
 }
 
@@ -34,7 +34,6 @@ body {
 
 .linksBox {
     width: 100%;
-    background: rgba(49, 49, 49, .5);
     padding: 5px 15px 2px 15px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -47,9 +46,20 @@ body {
     padding-left: 10px;
 }
 
+.grey {
+    background: rgba(49, 49, 49, .6);
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-radius: 10px;
+    
+}
+
 .main {
     min-height: 500px;
-    width: 80%;
+    width: 100%;
     margin-right: auto;
     margin-left: auto;
     background-color: white;
@@ -65,12 +75,13 @@ body {
 }
 
 .bottomMenu {
+    position: relative;
     width: 100%;
     text-align: center;
-    background: rgba(49, 49, 49, .6);
     padding: 5px 15px 5px 15px;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    top: -57px;
 }
 
 .bottomMenu a {
@@ -96,4 +107,6 @@ body {
         top: 35px;
     }
 }
+
+
 
