@@ -1,0 +1,99 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('../images/concretelighter.jpg');
+    background-size: cover;
+}
+
+.header {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100px;
+    position: relative;
+}
+
+.header img {
+    width: 400px;
+    height: auto;
+    position: absolute;
+    top: 27px;
+    left: 5%;
+}
+
+.topMenu {
+    width: 100%;
+    text-align: right;
+    padding-top: 55px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.linksBox {
+    width: 100%;
+    background: rgba(49, 49, 49, .5);
+    padding: 5px 15px 2px 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.topMenu a {
+    color: #3ba1e1;
+    font-family: 'Economica', sans-serif;
+    font-size: 2em;
+    padding-left: 10px;
+}
+
+.main {
+    min-height: 500px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.footer {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 75px;
+}
+
+.bottomMenu {
+    width: 100%;
+    text-align: center;
+    background: rgba(49, 49, 49, .6);
+    padding: 5px 15px 5px 15px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.bottomMenu a {
+    color: #3ba1e1;
+    font-family: 'Economica', sans-serif;
+    font-size: 2em;
+    padding-left: 20px;
+}
+
+.topMenu a, .bottomMenu a {
+    text-decoration: none;
+}
+
+.topMenu a:hover, .bottomMenu a:hover {
+    color: #93d9f3;
+}
+
+@media (max-width: 1027px) {
+    .header img {
+        width: 350px;
+        height: auto;
+        position: absolute;
+        top: 35px;
+    }
+}
+
