@@ -1,3 +1,5 @@
+/*STYLING FOR MAIN PAGE AND MAIN PAGE COMOPONENT DIRECTIVES*/
+
 body, html {
     margin: 0;
     padding: 0;
@@ -101,12 +103,59 @@ body {
 
 @media (max-width: 1027px) {
     .header img {
-        width: 350px;
+        width: 200px;
         height: auto;
         position: absolute;
-        top: 35px;
+        top: 73px;
     }
 }
 
+@media (max-width: 730px) {
+    .header img {
+        width: 200px;
+        height: auto;
+        position: absolute;
+        top: -20px;
+    }
+    
+    .topMenu {
+        margin-top: 30px;
+    }
+}
+
+/*STYLING FOR HOME PAGE VIEW*/
+
+.homeView {
+    font-family: sans-serif;
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.homeView h3, h4 {
+    font-family: 'Economica', sans-serif;
+}
+
+.homeView h3 {
+    font-size: 2.5em;
+}
+
+.homeView h4 {
+    font-size: 2em;
+}
 
 
+/*STYLING FOR CAREERS VIEW*/
+
+.listings {
+    font-family: sans-serif;
+    padding-top: 70px;
+    padding-bottom: 40px;
+}
+
+.listings h4 {
+    font-size: 2em;
+}
+
+.listings div {
+    padding-bottom: 30px;
+}

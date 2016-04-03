@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html ng-app="zorgApp">
     <head>
         <title>Zorg Industries</title>
         <meta charset="UTF-8">
@@ -12,34 +12,26 @@
     </head>
     <body>
         
-        <div class="header">
-            <a href="#"><img src="images/transparent-zorg-drop.png" alt="Zorg Industries"></a>
-            <div class="container topMenu">
-                <div class="linksBox">
-                    <a href="#">Home</a>
-                    <a href="#">Products</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Cart</a>
-                </div>
-            </div>
-        </div>
+        <main-header></main-header>
         
         <div class="grey">
-            <div class="container main"></div>
-        </div>
-        
-        <div class="footer">
-            <div class="container bottomMenu">
-                <a href="#">Careers</a>
-                <a href="#">Admin</a>
+            <div class="container main">
+                
+                <ui-view></ui-view>
+                
             </div>
         </div>
         
+ 
+        <main-footer></main-footer>
         
-     <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
-     <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js" type="text/javascript"></script>
-     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js" type="text/javascript"></script>
+         <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+         <script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js" type="text/javascript"></script>
+         <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.18/angular-ui-router.js" type="text/javascript"></script>
+         <script src="app/app.module.js" type="text/javascript"></script>
+         <script src="app/app.config.js" type="text/javascript"></script>
+         <script src="app/components/main-header.directive.js" type="text/javascript"></script>
+         <script src="app/components/main-footer.directive.js" type="text/javascript"></script>
     </body>
 </html>
