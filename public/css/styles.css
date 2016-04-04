@@ -129,10 +129,14 @@ body {
     font-family: sans-serif;
     padding-top: 70px;
     padding-bottom: 40px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .homeView h3, h4 {
     font-family: 'Economica', sans-serif;
+    text-align: center;
 }
 
 .homeView h3 {
@@ -143,19 +147,121 @@ body {
     font-size: 2em;
 }
 
+.solutions ul {
+    list-style-type: none;
+    font-size: large;
+}
+
+.solutions li {
+    padding-top: 30px;
+}
+
+.newProduct {
+    border-left: 1px solid #cccccc;
+}
+
+.newProduct img {
+    max-width: 50%;
+    height: auto;
+    float: right;
+}
+
+.newProduct p {
+    padding-top: 30px;
+    padding-right: 20px;
+    padding-left: 20px;
+    float: left;
+    width: 50%;
+}
+
+#newGun {
+    color: #3ba1e1;
+    text-transform: uppercase;
+}
+
+.big {
+    margin-bottom: 50px;
+}
+
+.rewards {
+    text-align: center;
+    border-top: 1px solid black;
+    padding-top: 20px;
+}
+
+@media (max-width: 991px) {
+    .newProduct {
+        border-left: none;
+        border-top: 1px solid #cccccc;
+    }
+    
+    .solutions {
+        padding-bottom: 30px;
+    }
+}
+
+
+
 
 /*STYLING FOR CAREERS VIEW*/
 
 .listings {
     font-family: sans-serif;
-    padding-top: 70px;
+    padding-top: 80px;
     padding-bottom: 40px;
 }
 
 .listings h4 {
     font-size: 2em;
+    text-align: left;
 }
 
 .listings div {
     padding-bottom: 30px;
+}
+
+
+/*STYLING FOR ADMIN VIEW*/
+
+.adminChoices {
+    max-width: 100%;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.adminChoices h1 {
+    font-family: 'Economica', sans-serif; 
+    padding-bottom: 30px;
+}
+
+.adminChoices ul {
+    list-style-type: none;
+    font-size: 1.6em;
+}
+
+.adminChoices li {
+    padding-bottom: 15px;
+}
+
+.adminChoices a {
+    text-decoration: none;
+    color: #3ba1e1
+}
+
+
+/*STYLING FOR ADMIN > ADD PRODUCT VIEW*/
+
+.enterProduct {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+
+.enterProduct h3 {
+    font-family: 'Economica', sans-serif; 
+    font-size: 2.5em;
+    margin-bottom: 30px;
 }

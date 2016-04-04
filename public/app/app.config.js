@@ -12,6 +12,16 @@
                 .state('careers', {
                     url: '/careers',
                     templateUrl: 'app/careers/careers-view.html'
+        })
+                .state('admin', {
+                    url: '/admin',
+                    templateUrl: 'app/admin/admin-view.html'
+        })
+                .state('adminAdd', {
+                    parent: 'admin',
+                    url: 'admin/add-product',
+                    templateUrl: 'app/admin/admin-addProduct.html',
+                    controller: 'addProductCtrl'
         });
         
         $urlRouterProvider.otherwise('/');

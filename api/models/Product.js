@@ -14,7 +14,7 @@ var ProductSchema = new mongoose.Schema({
         required: true
     },
     features: {
-        type: [String]
+        type: String
     },
     quantity: {
         type: Number
@@ -24,6 +24,9 @@ var ProductSchema = new mongoose.Schema({
     },
     inStock: {
         type: Boolean
+    },
+    photoSrc: {
+        type: String
     },
     comments: [Comment] 
 });
