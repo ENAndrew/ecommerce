@@ -17,6 +17,18 @@ module.exports = {
         });
     },
     
+    getProducts: function(req, res){
+        
+        Product.find({}, function(err, result){
+            if(err) {
+                return res.status(500).json(err);
+            } else {
+                return res.json(result);
+            }
+        });
+        
+    },
+    
     addComment: function(req, res){
     
         var newComment = new Comment(req.body);

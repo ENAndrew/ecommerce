@@ -9,6 +9,16 @@
                     url: '/',
                     templateUrl: 'app/home/home-view.html'
         })
+                .state('allProducts', {
+                    url: '/all-products',
+                    templateUrl: 'app/allProducts/allProducts-view.html',
+                    controller: 'allProductsCtrl',
+                    resolve: {
+                        products: function(allProductsService) {
+                            return allProductsService.getProducts();
+                        }
+                    }
+        })
                 .state('careers', {
                     url: '/careers',
                     templateUrl: 'app/careers/careers-view.html'
@@ -22,6 +32,17 @@
                     url: 'admin/add-product',
                     templateUrl: 'app/admin/admin-addProduct.html',
                     controller: 'addProductCtrl'
+        })
+                .state('adminRemove', {
+                    parent: 'admin',
+                    url: 'admin/remove-product',
+                    templateUrl: 'app/admin/adminRemove-view.html',
+                    controller: 'removeProductCtrl',
+                    resolve: {
+                        products: function(allProductsService) {
+                            return allProductsService.getProducts();
+                        }
+                    }
         });
         
         $urlRouterProvider.otherwise('/');

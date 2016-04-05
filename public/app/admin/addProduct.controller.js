@@ -29,6 +29,8 @@
            
            console.log($scope.productObj);
            
+           addProductService.addProduct($scope.productObj);
+           
           $scope.reset();
            
        };

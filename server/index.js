@@ -31,6 +31,9 @@ app.post('/api/products', mainController.addProduct);
 //add comment
 app.post('/api/comments', mainController.addComment);
 
+//find all products
+app.get('api/products', mainController.getProducts);
+
 //find product by query
 app.get('/api/products', mainController.queryProduct);
 
