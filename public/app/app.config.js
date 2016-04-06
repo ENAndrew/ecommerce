@@ -43,7 +43,18 @@
                             return allProductsService.getProducts();
                         }
                     }
-        });
+        })
+                .state('adminUpdate', {
+                    parent: 'admin',
+                    url: 'admin/update-product',
+                    templateUrl: 'app/admin/updateProduct-view.html',
+                    controller: 'updateProductCtrl',
+                    resolve: {
+                        products: function(allProductsService) {
+                            return allProductsService.getProducts();
+                        }
+                    }
+                });
         
         $urlRouterProvider.otherwise('/');
         
