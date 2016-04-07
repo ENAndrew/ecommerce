@@ -213,10 +213,29 @@ body {
 .allProducts h2 {
     font-family: 'Economica', sans-serif;
     font-size: 3em;
+    padding-bottom: 15px;
 }
 
 .product {
     padding-bottom: 30px;
+}
+
+.paras p {
+    padding-left: 30px;
+}
+
+.paras .btn {
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.imageCol {
+    text-align: center;
+}
+
+.imageCol img {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 

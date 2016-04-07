@@ -16,6 +16,9 @@
         
         $scope.reset = function(){
             $scope.selectProduct = {};
+            $scope.update = "";
+            $scope.products = products;
+            
         };
         
         

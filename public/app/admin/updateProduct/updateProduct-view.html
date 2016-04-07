@@ -28,7 +28,7 @@
         
       <div class="form-group row">
         <select class="form-control dropDown" ng-model="selectedItem">
-            <option selected>Field to Update</option>
+            <option value="" disabled selected>Choose Field</option>
             <option value="name">Name</option>
             <option value="description">Description</option>
             <option value="features">Features</option>
@@ -37,7 +37,7 @@
             <option value="inStock">In Stock</option>
             <option value="photoSrc">Photo Path</option>
         </select>
-          <input type="text" name="id" class="form-control" placeholder="enter new information" ng-model="update">
+          <input type="text" name="update" class="form-control" placeholder="enter new information" ng-model="update">
           <button type="submit" 
                   class="btn btn-secondary" 
                   ng-click="updateProd(selectedItem, update)">

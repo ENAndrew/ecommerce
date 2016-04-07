@@ -19,6 +19,10 @@
                         }
                     }
         })
+                .state('oneProduct', {
+                    url: '/product',
+                    templateUrl: 'app/oneProduct/oneProduct-view.html'
+        })
                 .state('careers', {
                     url: '/careers',
                     templateUrl: 'app/careers/careers-view.html'
@@ -30,13 +34,13 @@
                 .state('adminAdd', {
                     parent: 'admin',
                     url: 'admin/add-product',
-                    templateUrl: 'app/admin/admin-addProduct.html',
+                    templateUrl: 'app/admin/addProduct/admin-addProduct.html',
                     controller: 'addProductCtrl'
         })
                 .state('adminRemove', {
                     parent: 'admin',
                     url: 'admin/remove-product',
-                    templateUrl: 'app/admin/adminRemove-view.html',
+                    templateUrl: 'app/admin/removeProduct/adminRemove-view.html',
                     controller: 'removeProductCtrl',
                     resolve: {
                         products: function(allProductsService) {
@@ -47,7 +51,7 @@
                 .state('adminUpdate', {
                     parent: 'admin',
                     url: 'admin/update-product',
-                    templateUrl: 'app/admin/updateProduct-view.html',
+                    templateUrl: 'app/admin/updateProduct/updateProduct-view.html',
                     controller: 'updateProductCtrl',
                     resolve: {
                         products: function(allProductsService) {

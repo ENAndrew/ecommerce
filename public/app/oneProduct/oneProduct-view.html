@@ -1,27 +1,29 @@
-<div class="continer allProducts">
-    
-    <div class="product" ng-repeat="product in products track by $index">
+<div class="container oneProduct">
         
         <h2>{{product.name}}</h2>
         
         <div class="row productRow">
             
-            <div class="col-md-6 paras">
+            <div class="col-md-4 paras">
             
                 <p><b>{{product.description}}</b></p>
                 
                 <p>Features: {{product.features}}</p>
                 
-                <button class="btn btn-secondary" ui-sref="oneProduct">Details</button>
-            
+                <p>Price: {{product.price | currency}} Credits</p>
+                
+                <p>This item {{stockVer}} in stock.</p>
             </div>
             
-            <div class="col-md-6 imageCol">
+            <div class="col-md-4 imageCol">
                 <img class="img-responsive" ng-src="{{product.photoSrc}}">
+            </div>
+            
+            <div class="col-md-4 commentCol">
+                <p>placeholder for comments</p>
             </div>
         
         </div>
     </div>
-    
     
 </div>
