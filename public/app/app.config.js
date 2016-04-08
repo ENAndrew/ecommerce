@@ -20,8 +20,14 @@
                     }
         })
                 .state('oneProduct', {
-                    url: '/product',
-                    templateUrl: 'app/oneProduct/oneProduct-view.html'
+                    url: '/product:name',
+                    templateUrl: 'app/oneProduct/oneProduct-view.html',
+                    controller: 'oneProductCtrl',
+                    resolve: {
+                        product: function(oneProductService, $stateParams) {
+                            return oneProductService.getProduct($stateParams.name);
+                        }
+                    }
         })
                 .state('careers', {
                     url: '/careers',

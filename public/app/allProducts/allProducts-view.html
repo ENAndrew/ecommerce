@@ -1,6 +1,6 @@
 <div class="continer allProducts">
     
-    <div class="product" ng-repeat="product in products track by $index">
+    <div class="product" ng-repeat="product in products track by product.name">
         
         <h2>{{product.name}}</h2>
         
@@ -12,7 +12,7 @@
                 
                 <p>Features: {{product.features}}</p>
                 
-                <button class="btn btn-secondary" ui-sref="oneProduct">Details</button>
+                <button class="btn btn-secondary" ui-sref="oneProduct({name: product.name})">Details</button>
             
             </div>
             

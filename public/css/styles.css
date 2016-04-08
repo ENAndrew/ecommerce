@@ -238,6 +238,49 @@ body {
     margin-right: auto;
 }
 
+/*STYLING FOR ONE PRODUCT VIEW*/
+
+.oneProduct {
+    margin-top: 70px;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+.oneProduct h1 {
+    font-family: 'Economica', sans-serif;
+    font-size: 3.5em;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.formHolder {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+}
+
+.orderForm {
+    margin-bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.formHolder .btn{
+    margin-bottom: 10px; 
+    margin-top: 5px;
+    width: 50%;
+    margin-left: 25%;
+}
+
+
+.productRow {
+    margin-bottom: 20px; 
+}
+
 
 /*STYLING FOR CAREERS VIEW*/
 

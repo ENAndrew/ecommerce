@@ -88,7 +88,7 @@ module.exports = {
             query._id = mongoose.Types.ObjectId(req.params.id);
         }
 
-        Product.update(query, req.body, function(err, result){
+        Product.update(query, req.body, {new: true}, function(err, result){
             if(err){
                 return res.status(500).json(err);
             } else {
