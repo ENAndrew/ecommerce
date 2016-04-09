@@ -19,18 +19,17 @@
             
         };
         
-        this.sendComment = function(commentObj){
+        this.updateComment = function(commentObj, id){
             
             return $http({
-                method: 'POST',
-                url: baseUrl + '/api/comments',
+                method: 'PUT',
+                url: baseUrl + '/api/products/comments/' + id,
                 data: commentObj
             })
                     .then(function(response){
-                        console.log('send comment response', response);
+                        console.log('updateComment response is ', response.data);
             });
         };
-        
         
     });
     

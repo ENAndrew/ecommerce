@@ -29,7 +29,7 @@ mongoose.connection.once('open', function(){
 app.post('/api/products', mainController.addProduct);
 
 //add comment
-app.post('/api/comments', mainController.addComment);
+app.put('/api/products/comments/:id', mainController.addComment); //working on now, update product, push comment
 
 //find all products
 app.get('api/products', mainController.getProducts);
@@ -47,7 +47,7 @@ app.put('/api/products/:id', mainController.updateProdById);
 app.delete('/api/products/:id', mainController.deleteProdById);
 
 //delete comment by ID
-app.delete('/api/comments/:id', mainController.deleteCommById);
+app.delete('/api/comments/:id', mainController.deleteCommById);  //needs new path
 
 
 

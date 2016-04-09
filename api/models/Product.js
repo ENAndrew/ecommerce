@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var Comment = require('./Comment').schema;
+var Comment = require('./Comment');
 
 var ProductSchema = new mongoose.Schema({
     name: { 

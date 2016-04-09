@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var Product = require('../models/Product');
-var Comment = require('../models/Comment');
+//var Comment = require('../models/Comment');
 
 module.exports = {
     
@@ -31,28 +31,55 @@ module.exports = {
     
     addComment: function(req, res){
     
-        var newComment = new Comment(req.body);
+       if(!req.params.id) {
+            return res.status(400).send('id parameter needed');
+        }
+    
+        var query = {};
 
-        newComment.save(function(err, result){
+        if(req.params.id){
+            query._id = mongoose.Types.ObjectId(req.params.id);
+        }; 
+        
+        Product.findOne(query, function(err, result){
             if(err) {
-                return res.status(500).json(err);
-            } else {
-                return res.json(result);
-            }
+                res.status(500).send(err);
+            };
+            
+            var currentProduct = result;
+            
+            delete currentProduct._id; //this is not deleting the _id field
+            
+            currentProduct.comments.push(req.body); ////getting mod on _id not allowed errors. 
+            
+            console.log('the current product is ', currentProduct);
+            
+//            Product.update(query, currentProduct, function(err, result){
+//                console.log(err);
+//                if(err) {
+//                    res.status(500).send(err);
+//                } else {
+//                    return res.json(result);
+//                };
+//            });
+              
         });
+ 
     }, 
     
     queryProduct: function(req, res){
     
         var query = req.query;
 
-        Product.find(query, function(err, result){
-            if(err) {
-                return res.status(500).json(err);
-            } else {
-                return res.json(result);
-            }
-        });
+        Product.find(query)
+                .populate('comments')
+                .exec(function(err, result){
+                    if(err) {
+                        return res.status(500).json(err);
+                    } else {
+                        return res.json(result);
+                    }  
+                });
     },
     
     findProdById: function(req, res){
@@ -68,12 +95,13 @@ module.exports = {
         };
 
         Product.findOne(query, function(err, result){
-            if(err) {
-                return res.status(500).json(err);
-            } else {
-                return res.json(result);
-            }
-        });
+                    if(err) {
+                        return res.status(500).json(err);
+                    } else {
+                        return res.json(result);
+                    }  
+                });
+        
     },
     
     updateProdById: function(req, res){
@@ -83,12 +111,12 @@ module.exports = {
         }
 
         var query = {};
-
+        
         if(req.params.id){
             query._id = mongoose.Types.ObjectId(req.params.id);
         }
 
-        Product.update(query, req.body, {new: true}, function(err, result){
+        Product.update(query, req.body, function(err, result){
             if(err){
                 return res.status(500).json(err);
             } else {
