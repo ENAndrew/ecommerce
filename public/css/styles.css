@@ -281,6 +281,28 @@ body {
     margin-bottom: 20px; 
 }
 
+.commentForm {
+    width: 100%;
+    text-align: center;
+}
+
+.commentForm .form-group {
+    padding-left: 20px;
+}
+
+.commentForm label {
+    padding-right: 10px;
+}
+
+.commentForm .btn {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#commentText {
+    width: 300px;
+}
+
 
 /*STYLING FOR CAREERS VIEW*/
 

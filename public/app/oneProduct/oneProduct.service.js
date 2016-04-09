@@ -19,6 +19,18 @@
             
         };
         
+        this.sendComment = function(commentObj){
+            
+            return $http({
+                method: 'POST',
+                url: baseUrl + '/api/comments',
+                data: commentObj
+            })
+                    .then(function(response){
+                        console.log('send comment response', response);
+            });
+        };
+        
         
     });
     
