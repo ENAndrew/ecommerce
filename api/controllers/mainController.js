@@ -46,22 +46,31 @@ module.exports = {
                 res.status(500).send(err);
             };
             
-            var currentProduct = result;
+            var currentProduct = result;  //Result includes _id value, causes error
             
-            delete currentProduct._id; //this is not deleting the _id field
+            //Need to eliminate the _id key/value, however delete does not work on declared variables
+            //Rebuilding the correct key/value object structure here
+            var sendProduct = {
+                quantity: currentProduct.quantity,
+                price: currentProduct.price,
+                photoSrc: currentProduct.photoSrc,
+                name: currentProduct.name,
+                inStock: currentProduct.inStock,
+                features: currentProduct.features,
+                description: currentProduct.description,
+                comments: currentProduct.comments
+            };
             
-            currentProduct.comments.push(req.body); ////getting mod on _id not allowed errors. 
+            sendProduct.comments.push(req.body);
             
-            console.log('the current product is ', currentProduct);
-            
-//            Product.update(query, currentProduct, function(err, result){
-//                console.log(err);
-//                if(err) {
-//                    res.status(500).send(err);
-//                } else {
-//                    return res.json(result);
-//                };
-//            });
+            Product.update(query, sendProduct, function(err, result){
+                console.log(err);
+                if(err) {
+                    res.status(500).send(err);
+                } else {
+                    return res.json(result);
+                };
+            });
               
         });
  

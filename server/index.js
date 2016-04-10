@@ -28,7 +28,7 @@ mongoose.connection.once('open', function(){
 //add product
 app.post('/api/products', mainController.addProduct);
 
-//add comment
+//add comment to product
 app.put('/api/products/comments/:id', mainController.addComment); //working on now, update product, push comment
 
 //find all products
