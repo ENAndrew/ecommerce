@@ -31,7 +31,10 @@
            
            addProductService.addProduct($scope.productObj);
            
+           alert($scope.productObj.name + ' has been added.');
+           
           $scope.reset();
+
            
        };
        

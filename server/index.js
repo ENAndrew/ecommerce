@@ -29,7 +29,7 @@ mongoose.connection.once('open', function(){
 app.post('/api/products', mainController.addProduct);
 
 //add comment to product
-app.put('/api/products/comments/:id', mainController.addComment); //working on now, update product, push comment
+app.put('/api/products/comments/:id', mainController.addComment); //embedding, not using schema
 
 //find all products
 app.get('api/products', mainController.getProducts);

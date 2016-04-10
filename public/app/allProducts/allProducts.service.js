@@ -13,7 +13,6 @@
                 url: baseUrl + '/api/products'
             })
                     .then(function(response){
-                        console.log('getProducts response is ', response);
                         return response.data;
             });
             

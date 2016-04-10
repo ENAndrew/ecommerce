@@ -36,7 +36,11 @@
             
             <div class="col-md-4 commentCol">
                 <p><b>Owner Comments</b></p>
-                <div class="comment">
+                <div class="comment" ng-repeat="comment in prodComments">
+                    
+                    <p><i>{{comment.comment}}</i></p>
+                    
+                    <span class="comUser">{{comment.user}}</span>
                     
                 </div>
             </div>

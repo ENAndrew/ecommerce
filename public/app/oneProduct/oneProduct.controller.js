@@ -12,9 +12,6 @@
         
         console.log('the comments are ', $scope.prodComments);
         
-        //will need to populate this with a GET request to have all the existing comments
-        //on page load, then also push new comments to the object for immediate view
-        
         $scope.totalCost = 0;
         
         $scope.stockVer = "is not";
@@ -33,15 +30,15 @@
         
         $scope.sendComment = function(userName, comment){
             
-//            commentObj["product_id"] = $scope.product._id;
             commentObj["user"] = userName;
             commentObj["comment"] = comment;
             
             var id = $scope.product._id;
             
-            console.log('the comment object is ', commentObj);
+            //updates current $scope with new comment, on page reload all comments are
+            //obtained from the collection
+            $scope.prodComments.push(commentObj);  
 
-            
             oneProductService.updateComment(commentObj, id);
             
             $scope.comment = "";
