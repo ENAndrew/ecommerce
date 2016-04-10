@@ -12,13 +12,13 @@
     
     <div class="viewDetails">
         <ul>
-            <li>Name: {{selectProduct.name}}</li>
-            <li>Description: {{selectProduct.description}}</li>
-            <li>Features: {{selectProduct.features}}</li>
-            <li>Quantity: {{selectProduct.quantity}}</li>
-            <li>Price: {{selectProduct.price}}</li>
-            <li>In Stock: {{selectProduct.inStock}}</li>
-            <li>Photo Path: {{selectProduct.photoSrc}}</li>
+            <li><span class="availField">Name:</span> {{selectProduct.name}}</li>
+            <li><span class="availField">Description:</span> {{selectProduct.description}}</li>
+            <li><span class="availField">Features:</span> {{selectProduct.features}}</li>
+            <li><span class="availField">Quantity:</span> {{selectProduct.quantity}}</li>
+            <li><span class="availField">Price:</span> {{selectProduct.price}}</li>
+            <li><span class="availField">In Stock:</span> {{selectProduct.inStock}}</li>
+            <li><span class="availField">Photo Path:</span> {{selectProduct.photoSrc}}</li>
         </ul>
         
         
@@ -38,7 +38,8 @@
             <option value="photoSrc">Photo Path</option>
         </select>
           <input type="text" name="update" class="form-control" placeholder="enter new information" ng-model="update">
-          <button type="submit" 
+          <button type="submit"
+                  id="updateBtn"
                   class="btn btn-secondary" 
                   ng-click="updateProd(selectedItem, update)">
               Submit Update

@@ -33,6 +33,10 @@
                     url: '/careers',
                     templateUrl: 'app/careers/careers-view.html'
         })
+                .state('contact', {
+                    url: '/contact',
+                    templateUrl: 'app/contact/contact-view.html'
+        })
                 .state('admin', {
                     url: '/admin',
                     templateUrl: 'app/admin/admin-view.html'
@@ -40,7 +44,7 @@
                 .state('adminAdd', {
                     parent: 'admin',
                     url: 'admin/add-product',
-                    templateUrl: 'app/admin/addProduct/admin-addProduct.html',
+                    templateUrl: 'app/admin/addProduct/addProduct-view.html',
                     controller: 'addProductCtrl'
         })
                 .state('adminRemove', {

@@ -4,7 +4,7 @@
     
     app.service('addProductService', function($http, $q){
         
-        var baseUrl = 'http://localhost:8000'
+        var baseUrl = 'http://localhost:8000';
         
         this.addProduct = function(productObj){
             return $http({
@@ -13,7 +13,7 @@
                 data: productObj
             })
                     .then(function(response){
-                        console.log('service response', response);
+                        return(response);
             });
         };
         

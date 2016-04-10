@@ -1,6 +1,6 @@
 (function(){
 
-    var app = angular.module('zorgApp', ['ui.router']);
+    var app = angular.module('zorgApp', ['ui.router', 'ui.bootstrap', 'ngAnimate']);
      
 }());
 
