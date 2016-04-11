@@ -68,7 +68,18 @@
                             return allProductsService.getProducts();
                         }
                     }
-                });
+        })
+                .state('adminComments', {
+                    parent: 'admin',
+                    url: 'admin/manage-comments',
+                    templateUrl: 'app/admin/manageComments/manageComments-view.html',
+                    controller: 'manageCommentsCtrl',
+                    resolve: {
+                        products: function(allProductsService) {
+                            return allProductsService.getProducts();
+                        }
+                    }
+        });
         
         $urlRouterProvider.otherwise('/');
         
