@@ -20,7 +20,12 @@
     
     <uib-accordion-group heading="{{product.name}}" ng-repeat="product in products track by product._id">
         <ul>
-            <li ng-repeat="comment in product.comments track by comment._id"><button class="btn btn-secondary"><span class="glyphicon glyphicon-remove"></span></button>{{comment.user}} -  {{comment.comment}}</li>
+            <li ng-repeat="comment in product.comments track by comment._id">
+                <button class="btn btn-secondary" ng-click="deleteComment(product._id, comment._id)">
+                    <span class="glyphicon glyphicon-remove"></span>
+                </button>
+                {{comment.user}} -  {{comment.comment}}
+            </li>
         </ul>
       
     </uib-accordion-group>
