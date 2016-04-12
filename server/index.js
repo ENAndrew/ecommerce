@@ -47,7 +47,7 @@ app.put('/api/products/:id', mainController.updateProdById);
 app.delete('/api/products/:id', mainController.deleteProdById);
 
 //delete comment by ID
-app.delete('/api/comments/:id', mainController.deleteCommById);  //needs new path
+app.put('/api/products/:productId/:commentId', mainController.deleteCommById);  //needs new path
 
 
 

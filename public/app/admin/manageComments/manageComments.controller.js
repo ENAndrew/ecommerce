@@ -14,6 +14,9 @@
         $scope.deleteComment = function(prodId, commentId){
             
             console.log('product ID is ' + prodId + ' and comment Id is ' + commentId);
+            
+            manageCommentsService.deleteComment(prodId, commentId);
+            
         };
 
         

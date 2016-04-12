@@ -10,8 +10,6 @@
         
         $scope.prodComments = $scope.product.comments;
         
-        console.log('the comments are ', $scope.prodComments);
-        
         $scope.totalCost = 0;
         
         $scope.stockVer = "is not";
@@ -37,7 +35,7 @@
             
             //updates current $scope with new comment, on page reload all comments are
             //obtained from the collection
-            $scope.prodComments.push(commentObj);  
+            $scope.prodComments.push(commentObj); 
 
             oneProductService.updateComment(commentObj, id);
             

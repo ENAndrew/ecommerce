@@ -169,22 +169,26 @@ module.exports = {
     
     deleteCommById: function(req, res){
     
-        if(!req.params.id) {
+        if(!req.params.productId) {
             return res.status(400).send('id parameter needed');
         }
 
         var query = {};
 
-        if(req.params.id){
+        if(req.params.productId){
             query._id = mongoose.Types.ObjectId(req.params.id);
         }
+        
+        var comment_id = mongoose.Types.ObjectId(req.params.commentId);
 
-        Comment.remove(query, function(err, result){
+        Product.findByIdAndUpdate(query, {$pull: { 'comments': { _id : comment_id }}}, function(err, result){
+            
             if(err){
                 return res.status(500).json(err);
             } else {
                 return res.json(result);
             }
+            
         });
     }
     

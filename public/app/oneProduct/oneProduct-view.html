@@ -36,7 +36,7 @@
             
             <div class="col-md-4 commentCol">
                 <p><b>Owner Comments</b></p>
-                <div class="comment" ng-repeat="comment in prodComments">
+                <div class="comment" ng-repeat="comment in prodComments track by $index">
                     
                     <p><i>{{comment.comment}}</i></p>
                     
