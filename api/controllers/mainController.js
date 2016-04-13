@@ -50,42 +50,6 @@ module.exports = {
             }
             
         });
-        
-        //BELOW IS THE HARD WAY
-        
-//        Product.findOne(query, function(err, result){
-//            if(err) {
-//                res.status(500).send(err);
-//            };
-//            
-//            var currentProduct = result;  //Result includes _id value, causes error
-//            
-//            //Need to eliminate the _id key/value, however delete does not work on declared variables
-//            //Rebuilding the correct key/value object structure here
-//            var sendProduct = {
-//                quantity: currentProduct.quantity,
-//                price: currentProduct.price,
-//                photoSrc: currentProduct.photoSrc,
-//                name: currentProduct.name,
-//                inStock: currentProduct.inStock,
-//                features: currentProduct.features,
-//                description: currentProduct.description,
-//                comments: currentProduct.comments
-//            };
-//            
-//            sendProduct.comments.push(req.body);
-//            
-//            Product.update(query, sendProduct, function(err, result){
-//                console.log(err);
-//                if(err) {
-//                    res.status(500).send(err);
-//                } else {
-//                    return res.json(result);
-//                };
-//            });
-//              
-//        });
- 
     }, 
     
     queryProduct: function(req, res){

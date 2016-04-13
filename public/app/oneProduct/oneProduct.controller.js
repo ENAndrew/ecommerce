@@ -8,7 +8,13 @@
         
         $scope.product = product[0];
         
-        $scope.prodComments = $scope.product.comments;
+        $scope.prodComments = [];
+
+        var commArr = product[0].comments;
+        
+        commArr.forEach(function(item){
+            $scope.prodComments.push(item);
+        });
         
         $scope.totalCost = 0;
         
@@ -35,9 +41,8 @@
             
             //updates current $scope with new comment, on page reload all comments are
             //obtained from the collection
-            $scope.prodComments.push(commentObj); 
-            
-            console.log($scope.prodComments);
+            $scope.prodComments = $scope.prodComments.concat(commentObj);
+
 
             oneProductService.updateComment(commentObj, id);
             

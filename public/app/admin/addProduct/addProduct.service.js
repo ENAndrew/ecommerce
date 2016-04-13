@@ -11,9 +11,6 @@
                 method: 'POST',
                 url: baseUrl + '/api/products',
                 data: productObj
-            })
-                    .then(function(response){
-                        return(response);
             });
         };
         

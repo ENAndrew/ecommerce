@@ -17,6 +17,8 @@
             
             manageCommentsService.deleteComment(prodId, commentId);
             
+            
+            
         };
 
         

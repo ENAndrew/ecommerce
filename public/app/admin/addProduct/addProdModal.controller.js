@@ -5,10 +5,20 @@
         
     app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, prodName, status) {
         
-        $scope.status = status;  //to be used to change message if 
-        //POST unsucessful. 
+        $scope.postResult = '';
+        
+        if(status){
+            $scope.postResult = "Success!";
+            $scope.message = "has";
+        } else {
+            $scope.postResult = "There's Been a Problem";
+        }
         
         $scope.prodName = prodName;
+        
+        if(!prodName){
+            $scope.prodName = "Nothing";
+        }
 
         $scope.ok = function () {
             $uibModalInstance.close();
