@@ -168,30 +168,25 @@ module.exports = {
     },
     
     deleteCommById: function(req, res){
-    
-        if(!req.params.productId) {
-            return res.status(400).send('id parameter needed');
-        }
-
-        var query = {};
-
-        if(req.params.productId){
-            query._id = mongoose.Types.ObjectId(req.params.id);
-        }
         
-        var comment_id = mongoose.Types.ObjectId(req.params.commentId);
+        var query = {};
+        
+        query._id = req.params.productId;
 
-        Product.findByIdAndUpdate(query, {$pull: { 'comments': { _id : comment_id }}}, function(err, result){
-            
+        var commentId = req.params.commentId;
+
+        Product.findByIdAndUpdate(query, {
+            $pull: { 
+                comments: { _id : commentId }
+            }
+        }, function(err, result){ 
             if(err){
                 return res.status(500).json(err);
             } else {
                 return res.json(result);
             }
-            
         });
     }
-    
-    
+
 };
 

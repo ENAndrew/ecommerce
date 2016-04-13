@@ -36,6 +36,8 @@
             //updates current $scope with new comment, on page reload all comments are
             //obtained from the collection
             $scope.prodComments.push(commentObj); 
+            
+            console.log($scope.prodComments);
 
             oneProductService.updateComment(commentObj, id);
             
