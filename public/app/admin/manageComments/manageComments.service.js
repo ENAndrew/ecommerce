@@ -10,10 +10,10 @@
             
             return $http({
                 method: 'PUT',
-                url: baseUrl + '/api/products/' + prodId + '/' + commentId,
+                url: baseUrl + '/api/products/' + prodId + '/' + commentId
             })
                     .then(function(response){
-                        console.log('deleteComment response is ', response);
+                        return response;
             });
         };
         

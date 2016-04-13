@@ -9,7 +9,6 @@
         
         if(status){
             $scope.postResult = "Success!";
-            $scope.message = "has";
         } else {
             $scope.postResult = "There's Been a Problem";
         }
