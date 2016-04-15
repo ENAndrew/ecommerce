@@ -320,6 +320,7 @@ body {
 
 .aboutMain {
     margin-top: 100px;
+    max-width: 80%;
 }
 
 .zorgPic {
@@ -338,9 +339,25 @@ body {
     font-size: 3em;
 }
 
-.disclaimer {
-/*    background: url(images/newBrooklyn.jpg);  not working??*/
+.contactMe {
     
+}
+
+.disclaimer {
+    margin-top: 40px;
+    margin-bottom: 50px;
+    background: url(../images/newBrooklyn.jpg);
+    background-size: cover;
+    height: 400px; 
+}
+
+.trademark, .erica {
+    background-color: rgba(22, 17, 4, 0.75);
+    max-width: 500px;
+    height: 275px;
+    color: white;
+    margin: 50px;
+    border-radius: 15px;
 }
 
 /*STYLING FOR CONTACT VIEW*/
