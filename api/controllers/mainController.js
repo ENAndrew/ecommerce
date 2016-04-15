@@ -150,7 +150,7 @@ module.exports = {
                 return res.json(result);
             }
         });
-    }
+    },
 
 };
 

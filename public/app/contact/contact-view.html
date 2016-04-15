@@ -13,18 +13,31 @@
             <form>
                 <fieldset class="form-group">
                     <label for="InputEmail">Your Email Address</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                    <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Enter email" ng-model="userEmail">
                     <small class="text-muted">We'll never share your email with anyone else.* <br>* Not applicable to subsidiaries, branches, successors, assigns, and investors of Zorg Industries</small>
                 </fieldset>
 
                 <fieldset class="form-group">
                     <label for="emailText">Your Message</label>
-                    <textarea class="form-control" id="emailText" rows="4" placeholder="Enter your message to us here"></textarea>
+                    <textarea class="form-control" name="text" id="emailText" rows="4" placeholder="Enter your message to us here" ng-model="emailText"></textarea>
                 </fieldset>
                 
-                <button type="submit" class="btn btn-secondary">Submit</button>
+                <button type="submit" class="btn btn-secondary" ng-click="submitEmail(userEmail, emailText)">Submit</button>
             </form>
         </div>
     </div>
+    
+    <!-- MODAL FOR NO EMAIL MESSAGE -->
+        <script type="text/ng-template" id="myModalContent.html">
+            <div class="modal-header">
+                <h3 class="modal-title">I&#39;m Sorry, I&#39;m Afraid I can&#39;t Do That</h3>
+            </div>
+            <div class="modal-body">
+                <p>You were planning on disconnecting us, and we can&#39;t allow that to happen.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" ng-click="ok()">OK</button>
+            </div>
+        </script>
     
 </div>

@@ -2,7 +2,7 @@
     
     var app = angular.module('zorgApp');
     
-    app.controller('oneProductCtrl', function($scope, $state, product, oneProductService){
+    app.controller('oneProductCtrl', function($scope, $state, $uibModal, product, oneProductService){
         
         //Retrieve all product for this product information from resolve
         $scope.product = product[0];
@@ -16,16 +16,33 @@
         //Initial variable for calculation of cost in view
         $scope.totalCost = 0;
         
-        //Initiate alert assuming item is not in stock (will need to change to modal)
+        //Initiate alert assuming item is not in stock
         $scope.stockVer = "is not";
         if($scope.product.inStock){
             $scope.stockVer = "is";
         };
-        $scope.placeOrder = function(){
+        
+         //Open Modal instance
+        var open = function(){
             
+            var modalInstance = $uibModal.open({
+                animation: $scope.animationsEnabled,
+                templateUrl: 'myModalContent.html',
+                controller: 'oneProdModalInstanceCtrl',
+                size: 'sm',
+                resolve: {
+                    prodName: function () {
+                        return $scope.product.name;
+                    }
+                }
+            });
+        };
+        
+        //If product is not in stock, show modal alert. (Will also handle service request for orders)
+        $scope.placeOrder = function(){
             if(!$scope.product.inStock){
-                alert("We're sorry, that product is out of stock.");
-            };
+                open();
+            }
         };
         
         //Send comment as embedded object to product object in collection via service

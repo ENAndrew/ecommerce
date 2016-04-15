@@ -60,6 +60,21 @@
                 <button class="btn btn-secondary" ng-click="sendComment(userName, comment)">Send</button>
             </form>
         </div>
+        
+        <!-- MODAL FOR PRODUCT OUT OF STOCK MESSAGE -->
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Product Not Available</h3>
+        </div>
+        <div class="modal-body">
+            <p>We're sorry, {{name}} is out of stock.</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" ng-click="ok()">OK</button>
+        </div>
+    </script>
+    
+    
 </div>
     
 

@@ -17,10 +17,6 @@
            $scope.photoSrc = "";
        };
        
-       
-       //Initiate with data 'not' posting successfully to database
-       $scope.posted = null;
-       
        //Enable animations for Modal
         $scope.animationsEnabled = true;
         

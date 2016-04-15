@@ -4,6 +4,9 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var mongoose = require('mongoose');
 var mainController = require('../api/controllers/mainController');
+var nodemailer = require('nodemailer');
+
+
 
 
 var app = express();
@@ -47,8 +50,34 @@ app.put('/api/products/:id', mainController.updateProdById);
 app.delete('/api/products/:id', mainController.deleteProdById);
 
 //delete comment by ID
-app.put('/api/products/:productId/:commentId', mainController.deleteCommById);  //needs new path
+app.put('/api/products/:productId/:commentId', mainController.deleteCommById);
 
+//send Email 
+app.post('/api/postEmail', function(req, res){
+        
+        //Transporter object for nodemailer
+        var transporter = nodemailer.createTransport({
+            service: 'Gmail',
+            auth: {
+                user: '***',
+                pass: '***'
+            } //email is functional, removing auth object for commit to public repo
+            //considering making a throw away public SMTP acc't for auth
+        });
+    
+        var mailOptions = {
+            from: req.body.from,
+            to: 'erica.nicole.andrew@gmail.com',
+            subject: 'Mail to Zorg',
+            text: req.body.text
+        };
+
+        transporter.sendMail(mailOptions, function(err, result){
+            if(err){
+                return console.log(err);
+            };
+        });
+    });
 
 
 

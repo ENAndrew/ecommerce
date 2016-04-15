@@ -35,7 +35,12 @@
         })
                 .state('contact', {
                     url: '/contact',
-                    templateUrl: 'app/contact/contact-view.html'
+                    templateUrl: 'app/contact/contact-view.html',
+                    controller: 'contactCtrl'
+        })
+                .state('about',{
+                    url: '/about',
+                    templateUrl: 'app/about/about-view.html'
         })
                 .state('admin', {
                     url: '/admin',

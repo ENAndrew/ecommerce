@@ -316,6 +316,33 @@ body {
     padding-left: 20px;
 }
 
+/*STYLING FOR ABOUT VIEW*/
+
+.aboutMain {
+    margin-top: 100px;
+}
+
+.zorgPic {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.zorgPic img {
+    border-radius: 10px;
+}
+
+.zorgText h1 {
+    font-family: 'Economica', sans-serif;
+    text-align: center;
+    font-size: 3em;
+}
+
+.disclaimer {
+/*    background: url(images/newBrooklyn.jpg);  not working??*/
+    
+}
+
 /*STYLING FOR CONTACT VIEW*/
 
 .contactUs {
