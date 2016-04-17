@@ -10,9 +10,6 @@
             return $http({
                 method: 'DELETE',
                 url: baseUrl + '/api/products/' + id
-            })
-                    .then(function(response){
-                        console.log('remove service response', response);
             });
         };
         

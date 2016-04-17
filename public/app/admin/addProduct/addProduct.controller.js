@@ -4,9 +4,6 @@
    
    app.controller('addProductCtrl', function($scope, $uibModal, addProductService){
        
-       //Placeholder for new project object to be submitted to service
-       $scope.productObj = {};
-       
        //Clear form fields when new product submitted
        $scope.reset = function() {
            $scope.name = "";
@@ -15,23 +12,19 @@
            $scope.quantity = "";
            $scope.price = "";
            $scope.photoSrc = "";
-       };
-       
-       //Enable animations for Modal
-        $scope.animationsEnabled = true;
-        
+       };      
         
         //Open Modal instance
-        var open = function(posted){
+        var open = function(posted, productObj){
             
             var modalInstance = $uibModal.open({
-                animation: $scope.animationsEnabled,
+                animation: true,
                 templateUrl: 'myModalContent.html',
                 controller: 'ModalInstanceCtrl',
                 size: 'sm',
                 resolve: {
                     prodName: function () {
-                        return $scope.productObj.name;
+                        return productObj.name;
                     },
                     status: function() {
                         return posted;
@@ -40,36 +33,34 @@
             });
         };
         
-        //For Modal animation
-        $scope.toggleAnimation = function() {
-          $scope.animationsEnabled = !$scope.animationsEnabled;
-        };
        
        //Build product object and submit to service
        $scope.createProduct = function(name, description, features, quantity, price, photoSrc, inStock){
 
             //Status of $http POST result
             var posted = null;
-
-           //Build product object
-           $scope.productObj.name = name;
-           $scope.productObj.description = description;
-           $scope.productObj.features = features;
-           $scope.productObj.quantity = quantity;
-           $scope.productObj.price = price;
-           $scope.productObj.photoSrc = photoSrc;
-           $scope.productObj.inStock = inStock;
+            
+            //Build product object
+            var productObj = {
+                name: name,
+                description: description,
+                features: features,
+                quantity: quantity,
+                price: price,
+                photoSrc: photoSrc,
+                inStock: inStock
+            };
            
            //Submit product to service
-           addProductService.addProduct($scope.productObj)
+           addProductService.addProduct(productObj)
                    .then(function(result){
                         posted = true;
                         //open modal with success message
-                        open(posted);
+                        open(posted, productObj);
            }, function(result){
                         posted = false;
                         //open modal with failure message
-                        open(posted);
+                        open(posted, productObj);
            });
 
            //Clean up form fields
