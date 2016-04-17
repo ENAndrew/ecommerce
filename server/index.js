@@ -61,8 +61,8 @@ app.post('/api/postEmail', function(req, res){
             auth: {
                 user: '***',
                 pass: '***'
-            } //email is functional, removing auth object for commit to public repo
-            //considering making a throw away public SMTP acc't for auth
+            } //email is functional, auth info removed for public repo. 
+            //This version has a modal error mesasge when user attempts to send mail.  
         });
     
         var mailOptions = {

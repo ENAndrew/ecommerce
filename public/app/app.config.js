@@ -44,7 +44,10 @@
         })
                 .state('admin', {
                     url: '/admin',
-                    templateUrl: 'app/admin/admin-view.html'
+                    templateUrl: 'app/admin/admin-view.html',
+                    data: {
+                        requireLogin: true
+                    }
         })
                 .state('adminAdd', {
                     parent: 'admin',

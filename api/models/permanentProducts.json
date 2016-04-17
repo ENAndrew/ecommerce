@@ -1,0 +1,47 @@
+
+{
+    "__v" : 0,
+    "_id" : ObjectId("5712d3bfc79d7d0818f755ca"),
+    "comments" : [ 
+        {
+            "comment" : "What's the red button do?",
+            "user" : "Aknot",
+            "_id" : ObjectId("5712d42ec79d7d0818f755cb")
+        }
+    ],
+    "description" : "Ideal for quick, descreet interventions",
+    "features" : "Breaks down into four parts, undetectable by X-ray.  Comes standard with titanium recharger, three thousand round magazine, and is even easier to use with the Zorg patented 'Replay' button.  'Ice-Cube-System' upgrade option available.",
+    "inStock" : true,
+    "name" : "Zorg ZF-1 Pod Weapon",
+    "photoSrc" : "images/zf1.jpg",
+    "price" : 4567,
+    "quantity" : 10000
+}
+
+
+{
+    "name" : "Vektor CP1",
+    "description" : "An elegant choice for home and personal defense",
+    "features" : "Available through our partnership with Lyttleton Engineering Works, this semi-automatic pistol offers 10 and 12 round magazines and a gas-delayed blowback action.",
+    "quantity" : 1200,
+    "price" : 400,
+    "photoSrc" : "images/blaster2.jpg",
+    "inStock" : true,
+    "_id" : ObjectId("5712d592c79d7d0818f755cc"),
+    "comments" : [],
+    "__v" : 0
+}
+
+
+{
+    "__v" : 0,
+    "_id" : ObjectId("5712de0cc79d7d0818f755cd"),
+    "comments" : [],
+    "description" : "Mainstay of the New York Police Department",
+    "features" : "Shoulder mounting system fully integrated with NYPD armor and tracking unit. Compatible with heat seeking rounds. Courtesy of Devium Design.",
+    "inStock" : false,
+    "name" : "ZF-LE44",
+    "photoSrc" : "images/policeBlaster.jpg",
+    "price" : 1288,
+    "quantity" : 0
+}

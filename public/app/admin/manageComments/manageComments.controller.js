@@ -10,6 +10,7 @@
         //Retreive products information from resolve
         $scope.products = products;
         
+        
         //Delete commment by product and embedded comment Id values
         //Manage comments appearing in current view
         $scope.deleteComment = function(prodId, commentId){

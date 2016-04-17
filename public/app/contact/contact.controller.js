@@ -24,9 +24,10 @@
                 text: emailText
             };
             
+            //Modal exists on public repo, will send mail when privately hosted.
             open();
             
-//            contactService.sendEmail(emailObj);  (functional, but no auth info in public server code)
+//            contactService.sendEmail(emailObj);  (functional, no auth info in getHub public repo)
             
             //Reset inputs
             $scope.email = "";
