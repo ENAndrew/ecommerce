@@ -1,12 +1,9 @@
 
 {
-    "__v" : 0,
-    "_id" : ObjectId("5712d3bfc79d7d0818f755ca"),
     "comments" : [ 
         {
             "comment" : "What's the red button do?",
-            "user" : "Aknot",
-            "_id" : ObjectId("5712d42ec79d7d0818f755cb")
+            "user" : "Aknot"
         }
     ],
     "description" : "Ideal for quick, descreet interventions",
@@ -27,15 +24,11 @@
     "price" : 400,
     "photoSrc" : "images/blaster2.jpg",
     "inStock" : true,
-    "_id" : ObjectId("5712d592c79d7d0818f755cc"),
     "comments" : [],
-    "__v" : 0
 }
 
 
 {
-    "__v" : 0,
-    "_id" : ObjectId("5712de0cc79d7d0818f755cd"),
     "comments" : [],
     "description" : "Mainstay of the New York Police Department",
     "features" : "Shoulder mounting system fully integrated with NYPD armor and tracking unit. Compatible with heat seeking rounds. Courtesy of Devium Design.",
