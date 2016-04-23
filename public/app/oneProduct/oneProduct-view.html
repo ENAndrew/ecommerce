@@ -20,9 +20,18 @@
                             <label for="quantity">Order Quantity</label>
                             <input type="number" class="form-control" name="quantity" placeholder="quantity" ng-model="quantity">
                         </div>
+                        <div class="taxes">
+                            <ul>
+                                <li>Firearms and Ammunition Excise Tax: {{quantity * (product.price * 0.11) | currency}}</li>
+                                <li>Interplanetary Transport Fee: {{quantity * (product.price * 0.02) | currency}}</li>
+                                <li>Ecological Impact Abatement: {{quantity * (product.price * 0.034) | currency}}</li>
+                                <li>Warehouse Fee: {{quantity * 5 | currency}}</li>
+                                <li>Prop 463 Mental Health Rider: {{quantity * 22.57 | currency}}</li>
+                            </ul>
+                        </div>
                         <div class="form-group orderForm">
-                            <label for="total">Total Cost</label>
-                            <div>{{quantity * product.price | currency}}</div>
+                                <label for="total">Total Cost</label>
+                                <div>{{(quantity * product.price) + (product.price * 0.164) + (quantity * 27.57) | currency}}</div>
                         </div>
 
                         <button type="submit" class="btn btn-secondary" ng-click="placeOrder()">Submit Order</button>

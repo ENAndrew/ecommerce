@@ -1,6 +1,5 @@
 var mongoose = require('mongoose');
 var Product = require('../models/Product');
-//var Comment = require('../models/Comment');
 
 module.exports = {
     
@@ -150,7 +149,7 @@ module.exports = {
                 return res.json(result);
             }
         });
-    },
+    }
 
 };
 

@@ -7,14 +7,13 @@ var mainController = require('../api/controllers/mainController');
 var nodemailer = require('nodemailer');
 
 
-
-
 var app = express();
 var uri = 'mongodb://localhost/ecommerce';
 var port = 8000;
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.static('../public'));
 
 app.listen(port, function(){
     console.log('Listening on port ' + port);

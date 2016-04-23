@@ -269,11 +269,24 @@ body {
     padding-right: 10px;
 }
 
+.orderForm div {
+    float: right;
+}
+
 .formHolder .btn{
     margin-bottom: 10px; 
     margin-top: 5px;
     width: 50%;
     margin-left: 25%;
+}
+
+.taxes {
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.taxes li {
+    font-size: .7em;
 }
 
 
