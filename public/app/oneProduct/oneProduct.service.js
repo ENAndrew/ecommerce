@@ -4,7 +4,7 @@
     
     app.service('oneProductService', function($http){
         
-        var baseUrl = 'http://localhost:8000';
+        var baseUrl = 'http://zorg.clandrew.com';
         
         
         //Retrieive specified product information by Id

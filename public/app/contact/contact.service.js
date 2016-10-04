@@ -4,7 +4,7 @@
     
     app.service('contactService', function($http){
         
-        var baseUrl = 'http://localhost:8000';
+        var baseUrl = 'http://zorg.clandrew.com';
         
         this.sendEmail = function(emailObj){
             
