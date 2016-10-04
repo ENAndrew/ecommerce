@@ -4,7 +4,7 @@
     
     app.service('addProductService', function($http, $q){
         
-        var baseUrl = 'http://localhost:8000';
+        var baseUrl = 'http://zorg.clandrew.com/';
         
         this.addProduct = function(productObj){
             return $http({
