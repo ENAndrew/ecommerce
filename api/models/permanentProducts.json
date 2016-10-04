@@ -24,7 +24,7 @@
     "price" : 400,
     "photoSrc" : "images/blaster2.jpg",
     "inStock" : true,
-    "comments" : [],
+    "comments" : []
 }
 
 
