@@ -4,7 +4,7 @@
     
     app.service('removeProductService', function($http){
         
-        var baseUrl = 'http://localhost:8000'
+        var baseUrl = 'http://zorg.clandrew.com';
         
         this.removeProduct = function(id){
             return $http({
