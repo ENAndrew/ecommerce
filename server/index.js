@@ -8,7 +8,7 @@ var nodemailer = require('nodemailer');
 
 
 var app = express();
-var uri = 'mongodb://localhost/ecommerce';
+var uri = 'mongodb://104.237.142.245:27017/zorg_site';
 var port = 8000;
 
 app.use(bodyParser.json());
