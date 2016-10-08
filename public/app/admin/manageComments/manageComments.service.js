@@ -10,7 +10,7 @@
             
             return $http({
                 method: 'PUT',
-                url: baseUrl + '/api/products/' + prodId + '/' + commentId
+                url: baseUrl + '/public/api/products/' + prodId + '/' + commentId
             })
                     .then(function(response){
                         return response;

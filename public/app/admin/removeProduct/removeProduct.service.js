@@ -9,7 +9,7 @@
         this.removeProduct = function(id){
             return $http({
                 method: 'DELETE',
-                url: baseUrl + '/api/products/' + id
+                url: baseUrl + '/public/api/products/' + id
             });
         };
         

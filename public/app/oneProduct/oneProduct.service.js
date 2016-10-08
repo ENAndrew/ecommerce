@@ -12,7 +12,7 @@
             
             return $http({
                 method: 'GET',
-                url: baseUrl + '/api/products/?name=' + name
+                url: baseUrl + '/public/api/products/?name=' + name
             })
                     .then(function(response){
                         return response.data;
@@ -25,7 +25,7 @@
             
             return $http({
                 method: 'PUT',
-                url: baseUrl + '/api/products/comments/' + id,
+                url: baseUrl + '/public/api/products/comments/' + id,
                 data: commentObj
             });
         };

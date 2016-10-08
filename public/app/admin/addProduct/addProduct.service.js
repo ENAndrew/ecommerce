@@ -9,7 +9,7 @@
         this.addProduct = function(productObj){
             return $http({
                 method: 'POST',
-                url: baseUrl + '/api/products',
+                url: baseUrl + '/public/api/products',
                 data: productObj
             });
         };

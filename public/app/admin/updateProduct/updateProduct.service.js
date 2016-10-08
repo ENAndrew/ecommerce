@@ -9,7 +9,7 @@
         this.updateProduct = function(productObj, id){
             return $http({
                 method: 'PUT',
-                url: baseUrl + '/api/products/' + id,
+                url: baseUrl + '/public/api/products/' + id,
                 data: productObj
             })
                     .then(function(response){

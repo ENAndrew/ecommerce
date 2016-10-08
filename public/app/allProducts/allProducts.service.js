@@ -10,7 +10,7 @@
             
             return $http({
                 method: 'GET', 
-                url: baseUrl + '/api/products'
+                url: baseUrl + '/public/api/products'
             })
                     .then(function(response){
                         return response.data;
